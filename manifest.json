@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Linkedin SizeLens",
+    "description": "Linkedin extension to view company size and insert a job filter based on it.",
+    "version": "1.0",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "sizelensLogo512.png"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "scripts/util.js",
+                "scripts/content.js"
+            ],
+            "matches": [
+                "https://www.linkedin.com/jobs/search/*",
+                "https://www.linkedin.com/company/*/*"
+            ]
+        }
+    ]
+}
